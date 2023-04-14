@@ -1,38 +1,359 @@
-.App {
-  text-align: center;
+/* :root{
+  background: #f3bc3c;
+} */
+
+.--app-ser-bgsize{
+  /* height: 500px; */
+  background: #d2fff3;
+  padding-bottom: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.--nav-style{
+
+  border-radius: 13px 13px 0 0;
+  background: #47bda9;
+  box-shadow:  -20px 20px 40px #3ca190,
+               20px -20px 40px #52d9c2;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* ============= Header ============== */
+
+.--header-videoStyle{
+  width: 100%;
+  position: relative;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.--header-words{
+  position: absolute;
+  z-index: 2;
+  line-height: 0px;
+
+  bottom: 40%;
+}
+
+.--header-textbox p{
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.--header-textbox h1{
+  font-size: 190px;
+  font-weight: 200px;
+  margin-left: -10px;
+
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background-image: url(../public/imgs/animate/word_ani/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+
+}
+
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.--header-textbox h3{
+  font-size: 40px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 1400px) {
+
+  .--header-words{
+  
+    bottom: 10%;
+  }
+
+
+}
+
+@media only screen and (max-width: 992px) {
+
+  .--header-words{
+  
+    bottom: 7%;
+  }
+
+  .--header-textbox p{
+    font-size: 25px;
+    font-weight: 300;
+  }
+  
+  .--header-textbox h1{
+    font-size: 95px;
+    font-weight: 800px;
+    margin-left: -10px;
+  }
+  
+  .--header-textbox h3{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+
+}
+
+/* .--header-section{
+  background: #f3bc3c;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.--header-section-h2{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50vh;
+  color: #fff;
+  font-size: 10vw;
+}
+
+.--header-banner{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+
+  perspective: 200px;
+}
+
+.--header-blocks{
+
+  position: relative;
+  display: block;
+  width: 5vw;
+  height: 5vh;
+  background: url(../public/imgs/009_3.jpg);
+  animation: animate 10s ease-out forwards;
+  animation-delay: 2s;
+
+}
+@keyframes animate
+{
+  0%
+  {
+    transform:  translateZ(2000px);
+    background: url(../public/imgs/cycling.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    
+  }
+  100%
+  {
+    transform: translateZ(0px);
+    background: url(../public/imgs/cycling.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0);
+  }
+} */
+
+
+/* =========================== */
+
+
+.--text--position{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.--span--fontsize{
+  font-size: 5rem;
+  display: inline;
+}
+
+.--p--fontsize{
+  font-size: 1rem;
+}
+
+.appearing_transtion{
+  transition: all 0.3 ease;
+}
+.mapDiv{
+    height: 300px;
+    
+  }
+
+/* .--jum-myImg{
+  width: 200px;
+  height: 133px;
+} */
+
+
+
+
+/* @media screen and (min-width: 768px) {
+  .mapDiv{
+    height: 100px;
+    
+  }   
+} */
+
+/* ===================== Service ===================== */
+
+
+.--ser-wrapper{
+  display: flex;
+ 
+  margin-bottom: 40px !important;
+}
+.--ser-wrapper .--ser-static-txt{
+  color: #000;
+  font-size: 60px;
+  font-weight: 400;
+  margin-top: 40px !important;
+}
+.--ser-wrapper .--ser-dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+  
+}
+.--ser-dynamic-txts li{
+  list-style: none;
+  color: #000;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(3) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -270px;
+  }
+}
+.--ser-dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.--ser-dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 110%;
+  width: 100%;
+  background: #d2fff3;
+  border-left: 2px solid #000;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+.--ser-bgStyle{
+  background: #f3bc3c;
+}
+
+.--ser-style{
+  border-radius: 13px;
+  background: #f3bc3c;
+  box-shadow:  -10px 10px 20px #f3bc3c,
+              10px -10px 20px #f9c74f;
+}
+
+
+@media only screen and (max-width: 1169px) {
+  .vertical-timeline-element-date{
+    display: block !important;
+    float: none !important;
+    color: rgb(44, 44, 44) !important;
+  }
+}
+
+
+
+/* ========================== Experience ======================== */
+.--exp-bg{
+  background: #52d9c2;
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 16px;
+  color: black;
+  border-radius: 13px 13px 0 0;
+}
+
+.--exp-bg-title{
+  color: #fff;
+  font-size: 5em;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+
+  border-radius: 13px 13px 0 0;
+  background: #f9c74f;
+
+}
+
+.--exp-TL-title{
+  padding-top: 0.25em;
+}
+
+.vertical-timeline-element-content{
+  padding: 2em 3em !important;
+}
+
+.--exp-TL-date{
+  color: rgb(201, 251, 255);
+}
+
+#description {
+  margin: 1.5em 0 2em 0;
+}
+
+.--exp-TL-button{
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.--exp-TL-workButton{
+  background-color: #06d6a0;
+  
+}
+.--exp-TL-workButton:hover{
+  background-color: #0ac593;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.--exp-TL-schoolButton{
+  background-color: #f9c74f
+}
+.--exp-TL-schoolButton:hover{
+  background-color: #f3bc3c;
+  text-decoration: none;
+}
+
+/* ================ For Contact component ======= */
+
+.--cont-inp-rounded{
+  border-radius: 13px !important;
 }
