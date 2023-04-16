@@ -11,13 +11,25 @@ import Services from './components/Services';
 import Experiences from './components/Experiences';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import Window from './components/Window';
 
 function App() {
+
+  const [submit, setSubmit] = useState(true)
+
   return (
     <div className="App">
-      <Nav_bar/><Header/>
+
+    {submit === true? 
+    <Window closeWindow = {()=> {
+      setSubmit(!submit)
+    }}/> 
+    : null}
+      
+      <Nav_bar/>
+      <Header/>
       <About/>
+
 
       <div className='--app-ser-bgsize'>
         <Container >
@@ -30,7 +42,7 @@ function App() {
 
       <div className="" style={{background: "#f3bc3c"}}>
       <Container className=' py-5'>
-      <Contact/>
+      <Contact isSubmit = {submit => setSubmit(submit)} var = {submit}/>
       </Container>
       </div>
     </div>

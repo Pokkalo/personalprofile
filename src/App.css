@@ -2,6 +2,10 @@
   background: #f3bc3c;
 } */
 
+/* .--app-style{
+  max-width: 400px;
+} */
+
 .--app-ser-bgsize{
   /* height: 500px; */
   background: #d2fff3;
@@ -33,7 +37,7 @@
   z-index: 2;
   line-height: 0px;
 
-  bottom: 40%;
+  bottom: 30%;
 }
 
 .--header-textbox p{
@@ -312,6 +316,10 @@
 
 }
 
+.--exp-blockstyle{
+  border-radius: 13px;
+}
+
 .--exp-TL-title{
   padding-top: 0.25em;
 }
@@ -356,4 +364,30 @@
 
 .--cont-inp-rounded{
   border-radius: 13px !important;
+}
+
+/* ================ For Window =========== */
+
+.--wind-bg{
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.--wind-container{
+  position: absolute;
+  top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.--wind-alert{
+  
+  top: 40%;
 }

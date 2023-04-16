@@ -9,6 +9,7 @@ const Services = () => {
 
   return (
     <>
+    
     <Container className='my-5' id='services'>
         <div className="--ser-wrapper flex-column jusfity-content-center align-items-center">
             <h1 className='text-center mb-3 --ser-static-txt m-0'>I am a</h1>

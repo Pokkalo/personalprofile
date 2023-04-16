@@ -22,7 +22,8 @@ const Header = () => {
 
     <div className="--header-videoStyle d-flex justify-content-center align-items-center">
       <div className='--header-videoStyle'>
-        <img src="imgs/newOrange.jpg" alt="" className='w-100'/>
+        
+        <img src={require("../imgs/newOrange.jpg")} alt="" className='w-100'/>
         
       </div>
 

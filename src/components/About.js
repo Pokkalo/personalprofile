@@ -9,7 +9,7 @@ const About = () => {
     flex-column flex-lg-row
   '>
    
-      <img src="imgs/me.png" alt="" 
+      <img src={require("../imgs/me.png")} alt="" 
       
       className='d-flex justify-content-center 
       mx-auto'

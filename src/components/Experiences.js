@@ -37,7 +37,7 @@ const Experiences = () => {
                 <VerticalTimelineElement
                   key={element.key}
                   date={element.date}
-                  dateClassName="--exp-TL-date"
+                  dateClassName="--exp-TL-date "
                   iconStyle={isWorkIcon? workIconStyles: schoolIconStyles}
                   icon={isWorkIcon? <MdWorkOutline color='white'/> : <MdOutlineSchool color='white'/>}
                   position={toggleLR}
